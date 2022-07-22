@@ -1,1 +1,1 @@
-export const url= 'https://appiyudith.herokuapp.com/registros/'
+export const url= 'https://appiyudith.herokuapp.com/registros'

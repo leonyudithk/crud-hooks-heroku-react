@@ -1,14 +1,17 @@
 import {useNavigate, useLocation} from 'react-router-dom'
 import React from 'react';
 import { Layout, Menu,  } from 'antd';
+import { Logo } from '../styles/styles';         
 
 
 const {Header} = Layout;
 
-const navigate = useNavigate()
-const location = useLocation()
 
 const NavBar = () => {
+
+    const navigate = useNavigate();
+    const location = useLocation();
+
 const items = [
     {
         key: 1,
@@ -26,7 +29,7 @@ const items = [
 ]
     return (
        <Header>
-       
+        <Logo src="https://academiageek.co/wp-content/uploads/2021/03/Logo-AG-2021.png" />
           <Menu
                 theme="dark"
                 mode="horizontal"
