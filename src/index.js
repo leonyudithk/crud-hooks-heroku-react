@@ -1,11 +1,12 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-
+import AppRouter from './routes/AppRouter';
+import 'antd/dist/antd.css'
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <h1>Crud</h1>
+      <AppRouter/>
   </React.StrictMode>
 );
 
