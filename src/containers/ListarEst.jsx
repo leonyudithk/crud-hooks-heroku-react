@@ -1,10 +1,12 @@
 import React, { useEffect, useState } from 'react';
 import { Layout, Table, Button } from 'antd';
 import { url } from '../helpers/url';
+import { DeleteOutlined} from "@ant-design/icons"
 
 
 const ListarEst = () => {
 
+    const {Content} = Layout
         const [est, setEst]= useState([])
 
         const getData = async()=>{
@@ -69,13 +71,17 @@ useEffect(() => {
           {
             title: 'Accion',
             key: 'action',
-            render: ac => (<Button onClick={(()=>deleteEst(ac.id))}>Delete</Button>)
+            render: ac => (<Button onClick={(()=>deleteEst(ac.id))}><DeleteOutlined style={{ color: "red"}}/></Button>)
           },
       ];
     return (
-        <div>
+        <Content
+             style={{
+        padding: '0 50px',
+        margin: "50px auto 0 auto"
+      }}>
           <Table dataSource={dataSource} columns={columns} />;
-        </div>
+        </Content>
     );
 };
 
